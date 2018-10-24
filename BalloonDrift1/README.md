@@ -12,3 +12,7 @@ Change the altitude mode to “extruded”
 upload the KMLFILE.csv that is created when running the code
 download and open the new .kml file (must have google earth)
 
+
+
+
+
