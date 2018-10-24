@@ -1,0 +1,536 @@
+<html><head>
+<META http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<style>
+/* Default heading font (outside of tables) */
+body { font-family: sans-serif; font-size: 11pt; }
+
+td { vertical-align: top; padding-left: 4px; padding-right: 4px; }
+
+/* File Difference Report styles - Color */
+table.fc { border-top: 1px solid Black; border-left: 1px solid Black; width: 100%; font-family: monospace; font-size: 10pt; }
+
+tr.secBegin td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.secMiddle td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.secEnd td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.secAll td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.secSubEnd td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+tr.secSubAll td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+tr.secGap td { font-size: 4px; border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+
+td.LineNum { text-align: right; }
+td.LineRange { font-family: sans-serif; }
+td.SubLineRange { font-family: sans-serif; border-bottom: none; }
+
+td.AlignLeft { text-align: left; }
+td.AlignRight { text-align: right; }
+td.AlignCenter { text-align: center; }
+td.Caption { text-align: left; background-color: #E7E7E7; padding-top: 8px; }
+
+td.Normal { }
+td.HasSimilar { background-color: #F0F0FF; }
+td.HasMismatch { background-color: #FFF0F0; }
+td.HasOrphan { background-color: #FFF0F0; }
+td.Added { background-color: #FFF0F0; }
+td.Deleted { background-color: #FFF0F0; text-decoration: line-through; }
+td.UAdded { background-color: #F0F0FF; }
+td.UDeleted { background-color: #F0F0FF; text-decoration: line-through; }
+
+.ttSigDiff { color: #FF0000; }
+.ttInsigDiff { color: #0000FF; }
+.ttAdded { color: #FF0000; }
+.ttDeleted { text-decoration: line-through; }
+
+/* Directory Comparison Report styles - Color */
+table.dc { border-top: 1px solid Black; border-left: 1px solid Black; width: 100%; font-family: sans-serif; font-size: 10pt; }
+
+table.dc tr.secBegin td { border-bottom: 1px solid Silver; }
+table.dc tr.secMiddle td { border-bottom: 1px solid Silver; }
+
+.ttNewer { color: #FF0000; }
+.ttOlder { color: #808080; }
+.ttOrphan { color: #0000FF; }
+.ttGhosted { color: #008080; }
+</style>
+</head><body>
+FILE COMPARISON<br />
+Produced: 3/24/2011 8:51:56 PM<br />
+&nbsp; &nbsp;
+<br />
+Mode:&nbsp; Just Differences &nbsp;
+<br />
+Left base folder: C:\GRAMs\EarthGRAM2010V1.0\GRAM_code &nbsp;
+<br />
+Right base folder: C:\GRAMs\EarthGRAM2010V2.0\GRAM_code &nbsp;
+<br />
+&nbsp; &nbsp;
+<br />
+File: gram_E10.f90 &nbsp;
+<br />
+<table class="fc" cellspacing="0" cellpadding="0">
+<tr class="secAll">
+<td class="LineNum">2</td>
+<td class="HasMismatch">!&nbsp;&nbsp;&nbsp;&nbsp; Program Earth-GRAM-2010<span class="ttSigDiff"> </span>V<span class="ttSigDiff">ersion </span><span class="ttSigDiff">1</span>.0&nbsp; Released&nbsp; <span class="ttSigDiff">Jul</span>, 201<span class="ttSigDiff">0</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !GRAM&nbsp; 2</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="LineNum">2</td>
+<td class="HasMismatch">!&nbsp;&nbsp;&nbsp;&nbsp; Program Earth-GRAM-2010V<span class="ttSigDiff">2</span>.0&nbsp; Released&nbsp; <span class="ttSigDiff">May</span>, 201<span class="ttSigDiff">1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="ttSigDiff"> </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !GRAM&nbsp; 2</td>
+</tr>
+</table>
+&nbsp; &nbsp;
+<br />
+File: gramsubs_E10.f90 &nbsp;
+<br />
+<table class="fc" cellspacing="0" cellpadding="0">
+<tr class="secAll">
+<td class="LineNum">810</td>
+<td class="HasMismatch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ulphsrf, vlphsrf<span class="ttSigDiff">&nbsp;</span> <span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !PERT 57a</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="LineNum">810</td>
+<td class="HasMismatch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ulphsrf, vlphsrf<span class="ttSigDiff">,</span> <span class="ttSigDiff">rpdlim,</span> <span class="ttSigDiff">rdtlim</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !PERT 57a</td>
+</tr>
+<tr class="secGap"><td colspan="5">&nbsp;</td></tr>
+<tr class="secBegin">
+<td class="LineNum">817</td>
+<td class="HasMismatch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; wperv, alphav, umax, vmax, rpdl, stsC, vlls, ulphsrf, vlphsrf<span class="ttSigDiff"> </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ttSigDiff"> </span>&nbsp; !PERT 64</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="LineNum">817</td>
+<td class="HasMismatch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; wperv, alphav, umax, vmax, rpdl, stsC, vlls, ulphsrf, vlphsrf<span class="ttSigDiff">,</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="ttSigDiff">&amp;</span>&nbsp; !PERT 64</td>
+</tr>
+<tr class="secEnd">
+<td class="LineNum">&nbsp;</td>
+<td class="HasOrphan">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">818</td>
+<td class="HasOrphan"><span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rpdlim, rdtlim&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !PERT 64a</span></td>
+</tr>
+<tr class="secGap"><td colspan="5">&nbsp;</td></tr>
+<tr class="secBegin">
+<td class="LineNum">&nbsp;</td>
+<td class="HasOrphan">&nbsp;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="LineNum">952</td>
+<td class="HasOrphan"><span class="ttSigDiff">!---&nbsp; Get upper limit on rdt (which should be negative)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !PERT187a</span></td>
+</tr>
+<tr class="secMiddle">
+<td class="LineNum">&nbsp;</td>
+<td class="HasOrphan">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">953</td>
+<td class="HasOrphan"><span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If (ch &lt; 10.0d0)Then&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !PERT187b</span></td>
+</tr>
+<tr class="secMiddle">
+<td class="LineNum">&nbsp;</td>
+<td class="HasOrphan">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">954</td>
+<td class="HasOrphan"><span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rdtlim = -0.9d0 + 0.05d0*ch&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !PERT187c</span></td>
+</tr>
+<tr class="secMiddle">
+<td class="LineNum">&nbsp;</td>
+<td class="HasOrphan">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">955</td>
+<td class="HasOrphan"><span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Else If (ch &lt; 15.0d0)Then&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !PERT187d</span></td>
+</tr>
+<tr class="secMiddle">
+<td class="LineNum">&nbsp;</td>
+<td class="HasOrphan">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">956</td>
+<td class="HasOrphan"><span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rdtlim = -0.4d0 - 0.08d0*(ch - 10.0d0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !PERT187e</span></td>
+</tr>
+<tr class="secMiddle">
+<td class="LineNum">&nbsp;</td>
+<td class="HasOrphan">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">957</td>
+<td class="HasOrphan"><span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Else If (ch &lt; 30.0d0) Then&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !PERT187f</span></td>
+</tr>
+<tr class="secMiddle">
+<td class="LineNum">&nbsp;</td>
+<td class="HasOrphan">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">958</td>
+<td class="HasOrphan"><span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rdtlim = -0.8d0 + 0.04d0*(ch - 15.0d0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !PERT187g</span></td>
+</tr>
+<tr class="secMiddle">
+<td class="LineNum">&nbsp;</td>
+<td class="HasOrphan">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">959</td>
+<td class="HasOrphan"><span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Else&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !PERT187h</span></td>
+</tr>
+<tr class="secMiddle">
+<td class="LineNum">&nbsp;</td>
+<td class="HasOrphan">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">960</td>
+<td class="HasOrphan"><span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rdtlim = -0.2d0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !PERT187i</span></td>
+</tr>
+<tr class="secMiddle">
+<td class="LineNum">&nbsp;</td>
+<td class="HasOrphan">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">961</td>
+<td class="HasOrphan"><span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Endif&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !PERT187j</span></td>
+</tr>
+<tr class="secMiddle">
+<td class="LineNum">&nbsp;</td>
+<td class="HasOrphan">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">962</td>
+<td class="HasOrphan"><span class="ttSigDiff">!---&nbsp; Get upper limit on rpd from rdt limit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !PERT187k</span></td>
+</tr>
+<tr class="secMiddle">
+<td class="LineNum">&nbsp;</td>
+<td class="HasOrphan">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">963</td>
+<td class="HasOrphan"><span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rpdlim = (sdh + rdtlim*sth)/sph&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !PERT187l</span></td>
+</tr>
+<tr class="secMiddle">
+<td class="LineNum">&nbsp;</td>
+<td class="HasOrphan">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">964</td>
+<td class="HasOrphan"><span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If (dAbs(rpdlim) &gt; 0.99d0)rpdlim = dSign(0.99d0,rpdlim)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !PERT187m</span></td>
+</tr>
+<tr class="secMiddle">
+<td class="LineNum">&nbsp;</td>
+<td class="HasOrphan">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">965</td>
+<td class="HasOrphan"><span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If (rpd &gt; rpdlim) rpd = rpdlim&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !PERT187n</span></td>
+</tr>
+<tr class="secMiddle">
+<td class="LineNum">951</td>
+<td class="HasMismatch">!---&nbsp; Assume rpdl=rpds for perturbation p-d correlation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !PERT187<span class="ttSigDiff">a</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">966</td>
+<td class="HasMismatch">!---&nbsp; Assume rpdl=rpds for perturbation p-d correlation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !PERT187<span class="ttSigDiff">o</span></td>
+</tr>
+<tr class="secMiddle">
+<td class="LineNum">952</td>
+<td class="HasMismatch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rpdl = rpd*sph*sdh/(sphl*sdhl + sphs*sdhs)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !PERT187<span class="ttSigDiff">b</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">967</td>
+<td class="HasMismatch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rpdl = rpd*sph*sdh/(sphl*sdhl + sphs*sdhs)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !PERT187<span class="ttSigDiff">p</span></td>
+</tr>
+<tr class="secEnd">
+<td class="LineNum">953</td>
+<td class="HasMismatch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If (dAbs(rpdl) &gt; <span class="ttSigDiff">1</span>.<span class="ttSigDiff">0</span>d0 )rpdl = dSign(<span class="ttSigDiff">1</span>.<span class="ttSigDiff">0</span>d0,rpdl)<span class="ttSigDiff">&nbsp; </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !PERT187<span class="ttSigDiff">c</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">968</td>
+<td class="HasMismatch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If (dAbs(rpdl) &gt; <span class="ttSigDiff">0</span>.<span class="ttSigDiff">9</span><span class="ttSigDiff">9</span>d0 )rpdl = dSign(<span class="ttSigDiff">0</span>.<span class="ttSigDiff">9</span><span class="ttSigDiff">9</span>d0,rpdl)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !PERT187<span class="ttSigDiff">q</span></td>
+</tr>
+<tr class="secGap"><td colspan="5">&nbsp;</td></tr>
+<tr class="secBegin">
+<td class="LineNum">1710</td>
+<td class="HasMismatch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; real(double) , intent(<span class="ttSigDiff">in</span>out) :: ptemp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !PSIG 36</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="LineNum">1725</td>
+<td class="HasMismatch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; real(double) , intent(out) :: ptemp<span class="ttSigDiff">&nbsp; </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !PSIG 36</td>
+</tr>
+<tr class="secEnd">
+<td class="LineNum">1711</td>
+<td class="HasMismatch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; real(double) , intent(<span class="ttSigDiff">in</span>out) :: ppres&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !PSIG 37</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">1726</td>
+<td class="HasMismatch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; real(double) , intent(out) :: ppres<span class="ttSigDiff">&nbsp; </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !PSIG 37</td>
+</tr>
+</table>
+&nbsp; &nbsp;
+<br />
+File: initial_E10.f90 &nbsp;
+<br />
+<table class="fc" cellspacing="0" cellpadding="0">
+<tr class="secAll">
+<td class="LineNum">260</td>
+<td class="HasMismatch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' (Earth-GRAM-2010) ****'/,26x,'V<span class="ttSigDiff">ersion </span><span class="ttSigDiff">1</span>.0, Released <span class="ttSigDiff">Jul</span>, 201<span class="ttSigDiff">0</span>')&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !INIT162</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="LineNum">260</td>
+<td class="HasMismatch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' (Earth-GRAM-2010) ****'/,26x,'V<span class="ttSigDiff">2</span>.0, Released <span class="ttSigDiff">May</span>, 201<span class="ttSigDiff">1</span>')<span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !INIT162</td>
+</tr>
+<tr class="secGap"><td colspan="5">&nbsp;</td></tr>
+<tr class="secAll">
+<td class="LineNum">827</td>
+<td class="HasMismatch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; vlls, stsr, ulphsrf, vlphsrf<span class="ttSigDiff">&nbsp;</span> <span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !RNDI 54a</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="LineNum">827</td>
+<td class="HasMismatch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; vlls, stsr, ulphsrf, vlphsrf<span class="ttSigDiff">,</span> <span class="ttSigDiff">rdtlim,</span> <span class="ttSigDiff">rpdlim</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !RNDI 54a</td>
+</tr>
+<tr class="secGap"><td colspan="5">&nbsp;</td></tr>
+<tr class="secAll">
+<td class="LineNum">835</td>
+<td class="HasMismatch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; stsr, vlls, rra, ulphsrf, vlphsrf<span class="ttSigDiff">&nbsp;</span> <span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !RNDI 61a</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="LineNum">835</td>
+<td class="HasMismatch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; stsr, vlls, rra, ulphsrf, vlphsrf<span class="ttSigDiff">,</span> <span class="ttSigDiff">rdtlim,</span> <span class="ttSigDiff">rpdlim</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !RNDI 61a</td>
+</tr>
+<tr class="secGap"><td colspan="5">&nbsp;</td></tr>
+<tr class="secBegin">
+<td class="LineNum">&nbsp;</td>
+<td class="HasOrphan">&nbsp;</td>
+<td class="AlignCenter">-+</td>
+<td class="LineNum">883</td>
+<td class="HasOrphan"><span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sph = dSqrt(sp1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !RNDI108a</span></td>
+</tr>
+<tr class="secMiddle">
+<td class="LineNum">&nbsp;</td>
+<td class="HasOrphan">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">884</td>
+<td class="HasOrphan"><span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sdh = dSqrt(sd1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !RNDI108b</span></td>
+</tr>
+<tr class="secMiddle">
+<td class="LineNum">&nbsp;</td>
+<td class="HasOrphan">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">885</td>
+<td class="HasOrphan"><span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sth = dSqrt(st1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !RNDI108c</span></td>
+</tr>
+<tr class="secMiddle">
+<td class="LineNum">&nbsp;</td>
+<td class="HasOrphan">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">886</td>
+<td class="HasOrphan"><span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; suh = su1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !RNDI108d</span></td>
+</tr>
+<tr class="secEnd">
+<td class="LineNum">&nbsp;</td>
+<td class="HasOrphan">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">887</td>
+<td class="HasOrphan"><span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; svh = sv1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !RNDI108e</span></td>
+</tr>
+<tr class="secGap"><td colspan="5">&nbsp;</td></tr>
+<tr class="secBegin">
+<td class="LineNum">897</td>
+<td class="HasMismatch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; call profsigs_e10 (h1, phi1, thet1, <span class="ttSigDiff">st1, </span>s<span class="ttSigDiff">p</span>1, <span class="ttSigDiff">sd1, </span>s<span class="ttSigDiff">u</span>1, <span class="ttSigDiff">sv1,</span> <span class="ttSigDiff">stout,</span> &amp; !RNDI120c</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="LineNum">902</td>
+<td class="HasMismatch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; call profsigs_e10 (h1, phi1, thet1, <span class="ttSigDiff">d</span><span class="ttSigDiff">Sqrt(</span>s<span class="ttSigDiff">t</span>1<span class="ttSigDiff">)</span>, <span class="ttSigDiff">d</span><span class="ttSigDiff">Sqrt(</span>s<span class="ttSigDiff">p</span>1<span class="ttSigDiff">)</span>,&nbsp; <span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> &amp; !RNDI120c</td>
+</tr>
+<tr class="secEnd">
+<td class="LineNum">898</td>
+<td class="HasMismatch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; spout, sdout, suout, svout, sitewgt)<span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>&nbsp;&nbsp; !RNDI120d</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">903</td>
+<td class="HasMismatch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="ttSigDiff">dSqrt(sd1), su1, sv1, stout,</span>spout, sdout, suout, svout, sitewgt)&nbsp;&nbsp; !RNDI120d</td>
+</tr>
+<tr class="secGap"><td colspan="5">&nbsp;</td></tr>
+<tr class="secAll">
+<td class="LineNum">909</td>
+<td class="HasMismatch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; plp1 = min(0.9<span class="ttSigDiff">5</span>d0,plp1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !RNDI130</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="LineNum">914</td>
+<td class="HasMismatch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; plp1 = min(0.9<span class="ttSigDiff">9</span>d0,plp1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !RNDI130</td>
+</tr>
+<tr class="secGap"><td colspan="5">&nbsp;</td></tr>
+<tr class="secBegin">
+<td class="LineNum">&nbsp;</td>
+<td class="HasOrphan">&nbsp;</td>
+<td class="AlignCenter">-+</td>
+<td class="LineNum">937</td>
+<td class="HasOrphan"><span class="ttSigDiff">!---&nbsp;&nbsp;&nbsp;&nbsp; Get upper limit on rdt (which should be negative)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !RNDI153a</span></td>
+</tr>
+<tr class="secMiddle">
+<td class="LineNum">&nbsp;</td>
+<td class="HasOrphan">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">938</td>
+<td class="HasOrphan"><span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If (h1 &lt; 10.0d0)Then&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !RNDI153b</span></td>
+</tr>
+<tr class="secMiddle">
+<td class="LineNum">&nbsp;</td>
+<td class="HasOrphan">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">939</td>
+<td class="HasOrphan"><span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rdtlim = -0.9d0 + 0.05d0*h1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !RNDI153c</span></td>
+</tr>
+<tr class="secMiddle">
+<td class="LineNum">&nbsp;</td>
+<td class="HasOrphan">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">940</td>
+<td class="HasOrphan"><span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Else If (h1 &lt; 15.0d0)Then&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !RNDI153d</span></td>
+</tr>
+<tr class="secMiddle">
+<td class="LineNum">&nbsp;</td>
+<td class="HasOrphan">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">941</td>
+<td class="HasOrphan"><span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rdtlim = -0.4d0 - 0.08d0*(h1 - 10.0d0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !RNDI153e</span></td>
+</tr>
+<tr class="secMiddle">
+<td class="LineNum">&nbsp;</td>
+<td class="HasOrphan">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">942</td>
+<td class="HasOrphan"><span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Else If (h1 &lt; 30.0d0) Then&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !RNDI153f</span></td>
+</tr>
+<tr class="secMiddle">
+<td class="LineNum">&nbsp;</td>
+<td class="HasOrphan">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">943</td>
+<td class="HasOrphan"><span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rdtlim = -0.8d0 + 0.04d0*(h1 - 15.0d0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !RNDI153g</span></td>
+</tr>
+<tr class="secMiddle">
+<td class="LineNum">&nbsp;</td>
+<td class="HasOrphan">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">944</td>
+<td class="HasOrphan"><span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Else&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !RNDI153h</span></td>
+</tr>
+<tr class="secMiddle">
+<td class="LineNum">&nbsp;</td>
+<td class="HasOrphan">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">945</td>
+<td class="HasOrphan"><span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rdtlim = -0.2d0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !RNDI153i</span></td>
+</tr>
+<tr class="secMiddle">
+<td class="LineNum">&nbsp;</td>
+<td class="HasOrphan">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">946</td>
+<td class="HasOrphan"><span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Endif&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !RNDI153j</span></td>
+</tr>
+<tr class="secMiddle">
+<td class="LineNum">&nbsp;</td>
+<td class="HasOrphan">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">947</td>
+<td class="HasOrphan"><span class="ttSigDiff">!---&nbsp;&nbsp;&nbsp;&nbsp; Get upper limit on rpd from rdt limit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !RNDI153k</span></td>
+</tr>
+<tr class="secMiddle">
+<td class="LineNum">&nbsp;</td>
+<td class="HasOrphan">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">948</td>
+<td class="HasOrphan"><span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rpdlim = (sd1 + rdtlim*st1)/sp1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !RNDI153l</span></td>
+</tr>
+<tr class="secMiddle">
+<td class="LineNum">&nbsp;</td>
+<td class="HasOrphan">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">949</td>
+<td class="HasOrphan"><span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If (dAbs(rpdlim) &gt; 0.99d0)rpdlim = dSign(0.99d0,rpdlim)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !RNDI154</span></td>
+</tr>
+<tr class="secEnd">
+<td class="LineNum">&nbsp;</td>
+<td class="HasOrphan">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">950</td>
+<td class="HasOrphan"><span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If (rpd &gt; rpdlim) rpd = rpdlim&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !RNDI155</span></td>
+</tr>
+<tr class="secGap"><td colspan="5">&nbsp;</td></tr>
+<tr class="secBegin">
+<td class="LineNum">937</td>
+<td class="HasOrphan"><span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rp1s = sp1s*ppnd_e10(rvec(2),l)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !RNDI161</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="LineNum">&nbsp;</td>
+<td class="HasOrphan">&nbsp;</td>
+</tr>
+<tr class="secMiddle">
+<td class="LineNum">938</td>
+<td class="HasOrphan"><span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rt1s = rp1s - rd1s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !RNDI162</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">&nbsp;</td>
+<td class="HasOrphan">&nbsp;</td>
+</tr>
+<tr class="secMiddle">
+<td class="LineNum">939</td>
+<td class="HasMismatch">!---&nbsp;&nbsp;&nbsp;&nbsp; Adjust temperature perturbation, assuming rpdl = rpds&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !RNDI16<span class="ttSigDiff">2</span><span class="ttSigDiff">a</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">956</td>
+<td class="HasMismatch">!---&nbsp;&nbsp;&nbsp;&nbsp; Adjust temperature perturbation, assuming rpdl = rpds&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !RNDI16<span class="ttSigDiff">1</span></td>
+</tr>
+<tr class="secMiddle">
+<td class="LineNum">940</td>
+<td class="HasMismatch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rpdl = rpd*sp1*sd1/(sp1l*sd1l + sp1s*sd1s)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !RNDI162<span class="ttSigDiff">b</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">957</td>
+<td class="HasMismatch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rpdl = rpd*sp1*sd1/(sp1l*sd1l + sp1s*sd1s)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !RNDI162</td>
+</tr>
+<tr class="secMiddle">
+<td class="LineNum">941</td>
+<td class="HasMismatch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If (dAbs(rpdl)<span class="ttSigDiff">.gt.1.0</span>d0)rpdl = dSign(<span class="ttSigDiff">1</span>.<span class="ttSigDiff">0</span>d0,rpdl)<span class="ttSigDiff"> </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !RNDI162<span class="ttSigDiff">c</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">958</td>
+<td class="HasMismatch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If (dAbs(rpdl)<span class="ttSigDiff"> &gt; 0.99</span>d0)rpdl = dSign(<span class="ttSigDiff">0</span>.<span class="ttSigDiff">9</span><span class="ttSigDiff">9</span>d0,rpdl)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !RNDI162<span class="ttSigDiff">a</span></td>
+</tr>
+<tr class="secMiddle">
+<td class="LineNum">&nbsp;</td>
+<td class="HasOrphan">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">959</td>
+<td class="HasOrphan"><span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rp1s = sp1s*(rpdl*rd1s/sd1s + dSqrt(1.0d0-rpdl**2)*ppnd_e10(rvec(2),l))&nbsp; !RNDI162b</span></td>
+</tr>
+<tr class="secMiddle">
+<td class="LineNum">&nbsp;</td>
+<td class="HasOrphan">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">960</td>
+<td class="HasOrphan"><span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rt1s = rp1s - rd1s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !RNDI163</span></td>
+</tr>
+<tr class="secMiddle">
+<td class="LineNum">942</td>
+<td class="HasMismatch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; stsr = dSqrt(dAbs(sp1s**2 + sd1s**2 - 2.0d0*rpdl*sp1s*sd1s))&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !RNDI16<span class="ttSigDiff">2d</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">961</td>
+<td class="HasMismatch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; stsr = dSqrt(dAbs(sp1s**2 + sd1s**2 - 2.0d0*rpdl*sp1s*sd1s))&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !RNDI16<span class="ttSigDiff">3a</span></td>
+</tr>
+<tr class="secEnd">
+<td class="LineNum">943</td>
+<td class="HasMismatch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rt1s = rt1s*st1s/stsr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !RNDI16<span class="ttSigDiff">2e</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">962</td>
+<td class="HasMismatch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rt1s = rt1s*st1s/stsr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !RNDI16<span class="ttSigDiff">3b</span></td>
+</tr>
+</table>
+&nbsp; &nbsp;
+<br />
+File: models_E10.f90 &nbsp;
+<br />
+<table class="fc" cellspacing="0" cellpadding="0">
+<tr class="secAll">
+<td class="LineNum">94</td>
+<td class="HasMismatch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; , stdratio, stratio, corr, spdavg, spdsdg, uvcorrg, FS, hg1, hg2, <span class="ttSigDiff">rpd,</span> &amp; !ATMD 94</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="LineNum">94</td>
+<td class="HasMismatch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; , stdratio, stratio, corr, spdavg, spdsdg, uvcorrg, FS, hg1, hg2, <span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;</span> &amp; !ATMD 94</td>
+</tr>
+<tr class="secGap"><td colspan="5">&nbsp;</td></tr>
+<tr class="secBegin">
+<td class="LineNum">106</td>
+<td class="HasMismatch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; , stdratio, stratio, corr, spdavg, spdsdg, uvcorrg, FS, hg1, hg2, <span class="ttSigDiff">rpd,</span> <span class="ttSigDiff">&amp;</span> !ATMD105</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="LineNum">106</td>
+<td class="HasMismatch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; , stdratio, stratio, corr, spdavg, spdsdg, uvcorrg, FS, hg1, hg2, <span class="ttSigDiff">czi&nbsp;</span>&nbsp;<span class="ttSigDiff">&nbsp;</span> !ATMD105</td>
+</tr>
+<tr class="secEnd">
+<td class="LineNum">107</td>
+<td class="HasOrphan"><span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; czi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !ATMD105a</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="LineNum">&nbsp;</td>
+<td class="HasOrphan">&nbsp;</td>
+</tr>
+<tr class="secGap"><td colspan="5">&nbsp;</td></tr>
+<tr class="secAll">
+<td class="LineNum">446</td>
+<td class="HasMismatch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; plph = min(0.9<span class="ttSigDiff">5</span>d0,plph)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !ATMD442</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="LineNum">445</td>
+<td class="HasMismatch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; plph = min(0.9<span class="ttSigDiff">9</span>d0,plph)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !ATMD442</td>
+</tr>
+<tr class="secGap"><td colspan="5">&nbsp;</td></tr>
+<tr class="secAll">
+<td class="LineNum">545</td>
+<td class="HasOrphan"><span class="ttSigDiff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rpd = (sph*sph + sdh*sdh - sth*sth)/(2.0d0*sph*sdh)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !ATMD537a</span></td>
+<td class="AlignCenter">+-</td>
+<td class="LineNum">&nbsp;</td>
+<td class="HasOrphan">&nbsp;</td>
+</tr>
+</table>
+</body></html>

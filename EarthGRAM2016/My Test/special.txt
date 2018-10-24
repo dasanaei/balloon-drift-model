@@ -1,0 +1,2 @@
+      Time    Hgtkm GeocenLat  Lon(East)   DensMean   PresMean    Tmean   EWmean   NSmean   DensPert   PresPert    Tpert   EWpert  NSpert SDden% SDprs% SDtemK SDuwnd SDvwnd SDwwnd Wpert SpdAvg  SpdStd SOSmean SOSpert Sev
+      0.00293630.624  39.72556  -80.00000 3.1727e-016 9.2583e-010 1373.89  -48.10  -26.80 3.2044e-016 8.8724e-010 1303.62   89.19   24.93   6.06   7.15 110.49  87.00  87.00  12.01 -13.05 110.41  77.33 2021.21 1968.84   0
