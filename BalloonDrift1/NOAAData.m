@@ -23,3 +23,4 @@ function [windSpeed, windDir] = NOAAData(alt,lat, lon)
 % windDir: wind direction (degrees from N)
 
 %% Initializations
+
