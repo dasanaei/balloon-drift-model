@@ -1,0 +1,19 @@
+Changes to initial_E10.f90:
+
+Added the following line:
+
+        if (iyrrra == 3) rrayr = '13'                                             !INIT298b
+
+
+
+
+
+
+
+
+
+
+
+
+
+

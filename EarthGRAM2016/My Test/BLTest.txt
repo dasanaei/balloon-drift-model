@@ -1,0 +1,1 @@
+   Day    LST    Hgt    Lat      Lon   hsrf spdsrf LC     z0   Elmn   El   Elmd     sha blfct  nri   S       ool  ustar    BVfsq    hN   hbl   chb  sigrat  swb   swh spdavsrf sdpsdsrf   tsrf  stsrf
