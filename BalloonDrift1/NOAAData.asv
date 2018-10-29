@@ -53,5 +53,4 @@ lowerBoundSpdM = csvread(fileName, startSpd2, 0, [startSpd2, 0, endSpd2, 2]); % 
 %% Parse Data for Lat/Lon
 
 %% Interpolate Data 
-windSpeed = Interpolate(altRange(1), alt, altRange(2), lowerBoundSpd, upperBoundSpd);
-windDir = Interpolate(altRange(1), alt, altRange(2), lowerBoundDir, upperBoundDir);
+
