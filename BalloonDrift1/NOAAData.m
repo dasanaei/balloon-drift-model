@@ -13,7 +13,7 @@
 % 
 
 %% Function
-function [windSpeed, windDir] = NOAAData(fileName, alt,lat, lon)
+function [windSpeed, windDir] = NOAAData(fileName, alt, lat, lon)
 % inputs :
 % alt: altitude (m)
 % lat: latitude
@@ -30,8 +30,8 @@ if alt < altMeters(length(altMeters))
     altRange = [0;altMeters(length(altMeters))]; % if less than the first value (~92.14m) set to between sea level and first
     altRangeLoc = [length(altMeters) + 1, length(altMeters)] % set beyond, will be used when parsing data set
 else
-    resultSort = sort(abs(alt - altMeters)); % find difference between each alt and sort by lowest
-    altRangeLoc = [find(abs(alt - altMeters) == resultSort(1)), find(abs(alt - altMeters) == resultSort(2))] % location of two closest alts
+    resultSortAlt = sort(abs(alt - altMeters)); % find difference between each alt and sort by lowest
+    altRangeLoc = [find(abs(alt - altMeters) == resultSortAlt(1)), find(abs(alt - altMeters) == resultSortAlt(2))] % location of two closest alts
     altRange = altMeters(altRangeLoc);
 end
 
@@ -51,7 +51,75 @@ upperBoundSpdM = csvread(fileName, startSpd1, 0, [startSpd1, 0, endSpd1, 2]); % 
 lowerBoundSpdM = csvread(fileName, startSpd2, 0, [startSpd2, 0, endSpd2, 2]); % speed data for lower bound alt range
 
 %% Parse Data for Lat/Lon
+possibleLats = 40:.25:42.5; % vector of possible latitude values
+possibleLons = 239.25:.25:243.5; % vector of possible longitude values
 
-%% Interpolate Data 
+resultSortLat = sort(abs(lat - possibleLats));
+latRangeLoc = [find(abs(lat - possibleLats) == resultSortLat(1)), find(abs(lat - possibleLats) == resultSortLat(2))]; % location of two closest lats
+latRange = possibleLats(latRangeLoc) % two closest NOAA lat values to current lat
+
+resultSortLon = sort(abs(lon - possibleLons));
+lonRangeLoc = [find(abs(lon - possibleLons) == resultSortLon(1)), find(abs(lon - possibleLons) == resultSortLon(2))]; % location of two closest Lons
+lonRange = possibleLons(lonRangeLoc) % two closest NOAA lon values to current lon
+
+dataLatLonLoc = zeros(1,4); % vector to store row locations of lat, lon values in NOAA data; ["lowerBoundLat- lowerBound Lon", "lowerBoundLat- upperBound Lon", "upperBoundLat- lowerBound Lon", "upperBoundLat- lowerBound Lon"]
+
+for c = 1:length(upperBoundDirM) % find upper and lower bound lon row locations for lower bound lat
+   if upperBoundDirM(c, 2) == latRange(1)
+       for v = 0:length(possibleLons) - 1
+           if upperBoundDirM(c+v, 1) == lonRange(1);
+               if dataLatLonLoc(1) == 0
+                   dataLatLonLoc(1) = c+v;
+               end
+           end
+           if upperBoundDirM(c+v, 1) == lonRange(2);
+              if dataLatLonLoc(2) == 0
+                   dataLatLonLoc(2) = c+v;
+              end
+           end
+       end
+   end
+   if upperBoundDirM(c, 2) == latRange(2) % find upper and lower bound lon row locations for upper bound lat
+       for v = 0:length(possibleLons) - 1
+           if upperBoundDirM(c+v, 1) == lonRange(1);
+              if dataLatLonLoc(3) == 0
+                  dataLatLonLoc(3) = c+v;
+              end
+           end
+           if upperBoundDirM(c+v, 1) == lonRange(2);
+              if dataLatLonLoc(4) == 0
+                  dataLatLonLoc(4) = c+v;
+               end
+           end
+       end
+   end
+end
+
+%% Interpolate Data
+% Upper Bound Direction
+lowerBoundLatDirU = Interpolate(lonRange(1), lon, lonRange(2), upperBoundDirM(dataLatLonLoc(1), 3), upperBoundDirM(dataLatLonLoc(2), 3));
+upperBoundLatDirU = Interpolate(lonRange(1), lon, lonRange(2), upperBoundDirM(dataLatLonLoc(3), 3), upperBoundDirM(dataLatLonLoc(4), 3));
+
+upperBoundDir = Interpolate(latRange(1), lat, latRange(2), lowerBoundLatDirU, upperBoundLatDirU);
+
+% Lower Bound Direction
+lowerBoundLatDirL = Interpolate(lonRange(1), lon, lonRange(2), lowerBoundDirM(dataLatLonLoc(1), 3), lowerBoundDirM(dataLatLonLoc(2), 3));
+upperBoundLatDirL = Interpolate(lonRange(1), lon, lonRange(2), lowerBoundDirM(dataLatLonLoc(3), 3), lowerBoundDirM(dataLatLonLoc(4), 3));
+
+lowerBoundDir = Interpolate(latRange(1), lat, latRange(2), lowerBoundLatDirL, upperBoundLatDirL);
+
+% Upper Bound Speed
+lowerBoundLatSpdU = Interpolate(lonRange(1), lon, lonRange(2), upperBoundSpdM(dataLatLonLoc(1), 3), upperBoundSpdM(dataLatLonLoc(2), 3));
+upperBoundLatSpdU = Interpolate(lonRange(1), lon, lonRange(2), upperBoundSpdM(dataLatLonLoc(3), 3), upperBoundSpdM(dataLatLonLoc(4), 3));
+
+upperBoundSpd = Interpolate(latRange(1), lat, latRange(2), lowerBoundLatSpdU, upperBoundLatSpdU);
+
+% Lower Bound Speed
+lowerBoundLatSpdL = Interpolate(lonRange(1), lon, lonRange(2), lowerBoundSpdM(dataLatLonLoc(1), 3), lowerBoundSpdM(dataLatLonLoc(2), 3));
+upperBoundLatSpdL = Interpolate(lonRange(1), lon, lonRange(2), lowerBoundSpdM(dataLatLonLoc(3), 3), lowerBoundSpdM(dataLatLonLoc(4), 3));
+
+lowerBoundSpd = Interpolate(latRange(1), lat, latRange(2), lowerBoundLatSpdL, upperBoundLatSpdL);
+
+% Final Values
 windSpeed = Interpolate(altRange(1), alt, altRange(2), lowerBoundSpd, upperBoundSpd);
 windDir = Interpolate(altRange(1), alt, altRange(2), lowerBoundDir, upperBoundDir);
