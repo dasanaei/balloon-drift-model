@@ -1,1 +1,0 @@
-      Time    Hgtkm GeocenLat  Lon(East)   DensMean   PresMean    Tmean   EWmean   NSmean   DensPert   PresPert    Tpert   EWpert  NSpert SDden% SDprs% SDtemK SDuwnd SDvwnd SDwwnd Wpert SpdAvg  SpdStd SOSmean SOSpert Sev

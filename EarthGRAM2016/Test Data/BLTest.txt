@@ -1,2 +1,0 @@
-   Day    LST    Hgt    Lat      Lon   hsrf spdsrf LC     z0   Elmn   El   Elmd     sha blfct  nri   S       ool  ustar    BVfsq    hN   hbl   chb  sigrat  swb   swh spdavsrf sdpsdsrf   tsrf  stsrf
-  6.757 18.16  0.000  40.422  -86.931 0.200   3.71 10 0.06500 -43.2   2.3  55.9   92.43 1.000  0.64 3.91 -0.00902 0.317  0.00011   618   746     0  1.250  0.40  0.40     4.55     2.51 284.62   0.15

@@ -1,6 +1,0 @@
-Earth-GRAM 2016
-Enter directory:
-Enter filename:
-Press any key to continue . . . 
-GRAM Initialization
-Reading NCEP data
