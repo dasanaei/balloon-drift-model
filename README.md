@@ -1,13 +1,23 @@
-## How to use BalloonDrift1.m
-1) Obtain payload mass, volume, balloon mass, helium mass, total mass, and impacted surface area of the balloon.
-2) Determine starting location and find the coordinates (with as much significant figures as possible)
-3) Go to http://weather.uwyo.edu/upperair/sounding.html and change the parameters to the desired date and time of launch (only 2 days in the future is available)
-4) Click on the closest sounding station on the map, and copy the data provided on a .txt file.
-5) Remove all columns or rows with missing data (so matlab can read it as a matrix)
-6) Using zero_pressure.m and the parameters found in step 1, obtain an array of altitudes. Know what the time interval is between each measured altitude. 
-7) Plug in all the required inputs in that you have gathered above. 
-8) Go to http://www.gpsvisualizer.com/map_input?form=googleearth 
-9) Change the Output File Type to .kml
-10) Change the altitude mode to “extruded”
-11) Upload the KMLFILE.csv that is created when running the code
-12) Download and open the new .kml file (must have google earth)
+# Balloon-Drift-Model
+Consisting of three drift simulations, Purdue Orbital's Balloon Drift Model allows the user to visualize the travel of a zero-pressure polyethylene balloon. 
+
+Created by: Dante Sanaei, Michael Bailey, Matt Popplewell
+### Balloon-Drift-1:
+- Uses ground sounding data from the University of Wyoming Department of Atmospheric Science (http://weather.uwyo.edu/upperair/sounding.html)
+- Contains highly accurate past atmospheric data and a forcast range of one day.
+- Best used for research and preliminary testing
+- Instructions for use are located inside of the `\BalloonDrift1\Documentation` directory
+
+### Balloon-Drift-2:
+- Uses historical weather data from NASA's open source Earthgram 2016 (not in repo) 
+- Allows user to visualize a simulation of the travel of the balloon under average monthly conditions. 
+- Best use for modeling flights far enough into the future where no forcast exists.
+- Instructions for use are located inside of the `\BalloonDrift2\Documentation` directory
+
+### Balloon-Drift-3:
+- Uses forcasted NOAA weather data 
+- Utilzyses highly accurate forcasted weather data for up to 14 days in advance.
+- Best used for week of launch preperations. 
+- Instructions for user are located inside of the `\BalloonDrift3\Documentation` directory
+
+
