@@ -50,12 +50,12 @@ for i = 1:Layer
     else
         % Isothermic
         if Slopes(i) == 0
-            BasePressures(i) = BasePressures(i - 1) * exp(- g0 / (R * BaseTemps(i)) * (BaseAltitudes(i) - BaseAltitudes(i - 1)));
-            BaseDensities(i) = BaseDensities(i - 1) * BasePressures(i) / BasePressures(i - 1);
-        % Gradient
-        else
             BasePressures(i) = BasePressures(i - 1) * (BaseTemps(i) / BaseTemps(i - 1)) ^ (- g0 / (Slopes(i - 1) * R));
             BaseDensities(i) = BaseDensities(i - 1) * (BaseTemps(i) / BaseTemps(i - 1)) ^ (- ((g0 / (Slopes(i - 1) * R)) + 1));
+        % Gradient
+        else
+            BasePressures(i) = BasePressures(i - 1) * exp(- g0 / (R * BaseTemps(i)) * (BaseAltitudes(i) - BaseAltitudes(i - 1)));
+            BaseDensities(i) = BaseDensities(i - 1) * BasePressures(i) / BasePressures(i - 1);
         end
     end
     % Once we reach the desired layer and have calculated its base values,
