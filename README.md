@@ -20,4 +20,7 @@ Created by: Dante Sanaei, Michael Bailey, Matt Popplewell
 - Best used for week of launch preperations. 
 - Instructions for user are located inside of the `\BalloonDrift3\Documentation` directory
 
+#### Images: 
+![Simulation 1](resources/Image1.png?raw=true "Simulation 1")
+![Simulation 2](resources/Image2.png?raw=true "Simulation 2")
 
